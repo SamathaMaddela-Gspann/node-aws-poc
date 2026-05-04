@@ -2,9 +2,13 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      nodejs: 18
     commands:
+      - node -v
+      - npm -v
       - npm install
 
   build:
     commands:
-      - npx jest
+      - npm test
