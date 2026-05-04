@@ -5,16 +5,15 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-      - echo "Node version:"
-      - node -v
-      - echo "NPM version:"
-      - npm -v
+      - echo "Current directory:"
+      - pwd
+      - ls -la
       - echo "Installing dependencies..."
       - npm install
 
   build:
     commands:
-      - echo "Checking node_modules..."
-      - ls -la node_modules/.bin || echo "node_modules missing"
+      - echo "Checking jest binary..."
+      - ls node_modules/.bin
       - echo "Running tests..."
-      - npx jest
+      - ./node_modules/.bin/jest
