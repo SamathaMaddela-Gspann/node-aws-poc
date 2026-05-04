@@ -3,5 +3,5 @@ const app = require('../app');
 
 test('GET /health', async () => {
   const res = await request(app).get('/health');
-  expect(res.statusCode).toBe(500);
+  expect(res.statusCode).toBe(200);
 });
